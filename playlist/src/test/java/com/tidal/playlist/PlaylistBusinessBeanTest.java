@@ -65,7 +65,6 @@ public class PlaylistBusinessBeanTest {
 		trackList.add(t1);
 		trackList.add(t2);
 		trackList.add(t3);
-
 	}
 
 	@AfterMethod
@@ -82,10 +81,9 @@ public class PlaylistBusinessBeanTest {
 
 
 	@Test
-	public void testDeleteTracks() throws Exception {
+	public void testDeleteTracksEqualsNull() throws Exception {
 		Track track = playlistBusinessBean.deleteTrack(UUID.randomUUID().toString(), 1, t1);
-
-		assertTrue((track == null) || (track.equals(t1)));
+		assertTrue(track == null);
 	}
 
 	@Test
