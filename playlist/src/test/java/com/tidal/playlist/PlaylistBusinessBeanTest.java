@@ -22,6 +22,7 @@ import java.util.UUID;
 
 import static org.testng.AssertJUnit.assertTrue;
 import static org.testng.AssertJUnit.assertEquals;
+import static org.testng.AssertJUnit.assertNull;
 
 /**
  * @author: eivind.hognestad@wimpmusic.com
@@ -83,7 +84,7 @@ public class PlaylistBusinessBeanTest {
 	@Test
 	public void testDeleteTracksEqualsNull() throws Exception {
 		Track track = playlistBusinessBean.deleteTrack(UUID.randomUUID().toString(), 1, t1);
-		assertTrue(track == null);
+		assertNull(track);
 	}
 
 	@Test
